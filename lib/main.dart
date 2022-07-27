@@ -77,19 +77,29 @@ class MyApp extends StatelessWidget {
           title: Text('whatsapp'),
           backgroundColor: Colors.green,
         ),
-        body: ListView(
-          children: [
-            ...listOfChats.map((value) {
-              return ListTile(
-                leading: CircleAvatar(
-                  backgroundColor: Colors.blue,
-                ),
-                title: Text(value.title),
-                subtitle: Text(value.subTitle),
-                time: Text(value.time),
-              );
-            }).toList(),
-          ],
+
+        body: Stack(
+          
+          children:[
+            Container(
+              height: 900,
+              width: 1900,
+              child: Image.asset('assets/1.jpg' , fit:  BoxFit.cover),
+            ),
+            ListView(
+            children: [
+              ...listOfChats.map((value) {
+                return ListTile(
+                  leading: CircleAvatar(
+                    backgroundColor: Colors.blue,
+                  ),
+                  title: Text(value.title),
+                  subtitle: Text(value.subTitle),
+                  trailing: Text(value.time)
+                );
+              }).toList(),
+            ],
+          ),]
         ),
       ),
     );
