@@ -71,7 +71,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'whatsapp demo',
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(backgroundColor: Colors.cyan),
+      theme: ThemeData(backgroundColor: Colors.blue),
       home: Scaffold(
         appBar: AppBar(
           title: Text('whatsapp'),
