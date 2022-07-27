@@ -86,6 +86,7 @@ class MyApp extends StatelessWidget {
                 ),
                 title: Text(value.title),
                 subtitle: Text(value.subTitle),
+                time: Text(value.time),
               );
             }).toList(),
           ],
